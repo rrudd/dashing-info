@@ -4,6 +4,6 @@ rvm:
 deploy:
   provider: heroku
   api_key: $HEROKU_KEY
-  app: netlight-info
+  app: $HEROKU_APP
 after_deploy:
   - ./run_dash.sh

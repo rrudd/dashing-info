@@ -12,8 +12,15 @@ $background-color:  #47bbb3;
   div {
     margin-bottom: 10px;
   }
-  
+
   h3 {
     text-align: left;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+    top: 5px;
+    right: 10px;
+    left: auto;
   }
 }
