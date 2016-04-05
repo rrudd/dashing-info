@@ -5,3 +5,5 @@ deploy:
   provider: heroku
   api_key: $HEROKU_KEY
   app: netlight-info
+after_deploy:
+  - ./run_dash.sh
