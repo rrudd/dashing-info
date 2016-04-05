@@ -37,6 +37,6 @@ epic_url = "http://epic.fi/#!/weeklymenu"
 SCHEDULER.every '2h', :first_in => 0 do
   factory_menu = get_factory_menu(factory_url)
   perho_menu = get_perho_menu(perho_url)
-  send_event('lunch', { factory_lunch: "#{factory_menu}", factory_title: "Factory Kamppi",
-    perho_lunch: "#{perho_menu}", perho_title: "Ravintola Perho" })
+  send_event('lunch', { factory_lunch: "#{factory_menu}", factory_title: "FACTORY KAMPPI",
+    perho_lunch: "#{perho_menu}", perho_title: "RAVINTOLA PERHO" })
 end
