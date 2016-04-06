@@ -2,13 +2,17 @@ This projects intends to provide an easy to use web view for use in office info 
 
 Check out http://shopify.github.com/dashing for more information on how to set up the project.
 
-## Set up the necessary environment variables
+## API credentials
 
-As the application relies heavily on third party API:s, you will need to set your access tokens as environment variables. Below is a table of the needed variables. Expect this list to grow as the project matures.
+As the application relies heavily on third party API:s, you will need credentials for some of the widgets. It is suggested that you set your credentials as environment variables rather than hard code them. Below is a table of the needed variables. Expect this list to grow as the project matures.
 
 Variable     | Description
 -------------|------------
 FORECAST_KEY | Key to the Dark Sky Forecast API. Get it [here](https://developer.forecast.io/).
+-------------|------------
+HSL_USER     | Username for your HSL developer account. Get it [here](http://developer.reittiopas.fi/pages/en/account-request.php)
+-------------|------------
+HSL_PASS     | Password for your HSL developer account.
 
 ## Using Travis
 
