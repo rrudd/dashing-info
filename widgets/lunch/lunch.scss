@@ -1,32 +1,41 @@
-$background-color:  #36185F;
-$light-color: rgba(255, 255, 255, 0.7);
+@import '../../assets/stylesheets/colors';
+
+$background-color:  $teal;
+$text-color:  #fff;
+// $text-color:  #36185F;
 
 .widget-lunch {
 
   background-color: $background-color;
+  color: $text-color;
+  font-weight: lighter;
 
   p {
     text-align: left;
-    font-size: large;
+    font-weight: 100;
   }
 
   h1 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
-  div:not(:last-child) {
-    margin-bottom: 10px;
+  .restaurant:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .restaurant.first {
+    margin-top: 30px;
   }
 
   .updated-at {
     color: rgba(255, 255, 255, 0.3);
-    top: 5px;
+    top: 12px;
     right: 10px;
     left: auto;
   }
 
   .title {
-    color: $light-color;
+    color: $text-color;
     text-align: left;
     font-size: 25px;
   }

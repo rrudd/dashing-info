@@ -1,10 +1,11 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #CC9933;
+@import '../../assets/stylesheets/colors';
+$background-color:  $blue;
 
 $full-color:  rgba(255, 255, 255, 1);
-$light-color: rgba(255, 255, 255, 0.7);
+$light-color: rgba(255, 255, 255, 1);
 
 // ----------------------------------------------------------------------------
 // Widget-forecast styles
@@ -29,14 +30,15 @@ $light-color: rgba(255, 255, 255, 0.7);
 
   background-color: $background-color;
   padding-top: 15px !important;
+  font-weight: 100;
 
   h1 {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
 
   .updated-at {
     color: rgba(255, 255, 255, 0.3);
-    top: 5px;
+    top: 12px;
     right: 10px;
     left: auto;
   }
