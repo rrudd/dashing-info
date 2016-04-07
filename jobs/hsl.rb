@@ -3,8 +3,8 @@ require 'json'
 
 host = "api.reittiopas.fi"
 stops = ["1130139", "1130439", "1130109", "1130438", "1130110"]
-user = ENV['HSL_USER'] || ""
-pass = ENV['HSL_PASS'] || ""
+user = ENV['HSL_USER']
+pass = ENV['HSL_PASS']
 
 def line_from_code(code)
   line = code[1..4]
