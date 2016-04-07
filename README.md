@@ -9,9 +9,7 @@ As the application relies heavily on third party API:s, you will need credential
 Variable     | Description
 -------------|------------
 FORECAST_KEY | Key to the Dark Sky Forecast API. Get it [here](https://developer.forecast.io/).
--------------|------------
 HSL_USER     | Username for your HSL developer account. Get it [here](http://developer.reittiopas.fi/pages/en/account-request.php)
--------------|------------
 HSL_PASS     | Password for your HSL developer account.
 
 ## Using Travis
