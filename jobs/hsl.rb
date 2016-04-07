@@ -27,5 +27,5 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   end
   sorted_departures = all_departures.sort_by { |dep| dep["time"] }
   puts sorted_departures
-  send_event('hsl', { departures: sorted_departures[0..20] })
+  send_event('hsl', { departures: sorted_departures[0..18] })
 end

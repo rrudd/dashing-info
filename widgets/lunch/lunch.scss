@@ -8,11 +8,11 @@ $text-color:  #fff;
 
   background-color: $background-color;
   color: $text-color;
-  font-weight: lighter;
 
   p {
     text-align: left;
     font-weight: 100;
+    font-size: 90%;
   }
 
   h1 {
@@ -20,7 +20,7 @@ $text-color:  #fff;
   }
 
   .restaurant:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .restaurant.first {
