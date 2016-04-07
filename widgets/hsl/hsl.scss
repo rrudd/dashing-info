@@ -1,0 +1,39 @@
+@import '../../assets/stylesheets/colors';
+
+.widget-hsl {
+  background-color: $orange;
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.3);
+    top: 12px;
+    right: 10px;
+    left: auto;
+  }
+
+  ul {
+    margin-top: 40px;
+  }
+  li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .time {
+    padding-left: 20px;
+    display: inline-block;
+    float:left;
+  }
+
+  .line {
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 30px;
+    float:right;
+  }
+
+  li:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

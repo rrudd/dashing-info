@@ -1,0 +1,11 @@
+<div class="widget-header">TRANSPORTATION<hr /></div>
+<div class="updated-at" data-bind="updatedAtMessage"></div>
+
+<div>
+  <ul>
+    <li data-foreach-dep="departures">
+      <div class="time" data-bind="dep.time_str"></div>
+      <div class="line" data-bind="dep.line"></div>
+    </li>
+  </ul>
+</div>
