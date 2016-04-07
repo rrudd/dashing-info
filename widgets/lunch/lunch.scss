@@ -8,11 +8,12 @@ $text-color:  #fff;
 
   background-color: $background-color;
   color: $text-color;
+  font-size: 90%;
+  padding-bottom: 0 !important;
 
   p {
     text-align: left;
     font-weight: 100;
-    font-size: 90%;
   }
 
   h1 {
@@ -23,9 +24,9 @@ $text-color:  #fff;
     margin-bottom: 10px;
   }
 
-  .restaurant.first {
-    margin-top: 30px;
-  }
+    .restaurant.first {
+      margin-top: 15px;
+    }
 
   .updated-at {
     color: rgba(255, 255, 255, 0.3);
