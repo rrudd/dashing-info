@@ -15,6 +15,8 @@ end
 
 SCHEDULER.every '1m', :first_in => 0 do |job|
   all_departures = []
+  time_limit = Time.now + 2*60
+  time_limit_str = time_limit.strftime("%H:%M")
   stops.each do |stop|
     response = Net::HTTP.get_response(host,"/hsl/prod/?request=stop&user=#{user}&pass=#{pass}&format=json&code=#{stop}")
     stop = JSON.parse(response.body)
@@ -22,10 +24,11 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
     stop_departures.each do |departure|
       departure["line"] = line_from_code(departure["code"])
       departure["time_str"] = departure["time"].to_s.insert(2, ":")
-      all_departures << departure
+      if departure["time_str"] > time_limit_str
+        all_departures << departure
+      end
     end
   end
   sorted_departures = all_departures.sort_by { |dep| dep["time"] }
-  puts sorted_departures
   send_event('hsl', { departures: sorted_departures[0..18] })
 end
