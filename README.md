@@ -14,4 +14,4 @@ HSL_PASS     | Password for your HSL developer account.
 
 ## Using Travis
 
-This application supports Travis CI deployment to Heroku. In order to make it work, you will need to set up environment variables `HEROKU_KEY` and `HEROKU_APP` with your Heroku API key and application name in your Travis settings.
+This application supports Travis CI deployment to Heroku. In order to make it work, you will need to set up environment variables `HEROKU_KEY` and `HEROKU_APP` with your Heroku API key and application name in your Travis settings. Furthermore, make sure to set the timezone settings for Heroku to your own timezone for the HSL widget to work properly. This can be done by setting the `TZ` heroku environment variable.
