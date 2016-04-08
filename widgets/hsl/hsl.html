@@ -2,10 +2,18 @@
 <div class="updated-at" data-bind="updatedAtMessage"></div>
 
 <div>
-  <ul>
-    <li data-foreach-dep="departures">
-      <div class="time" data-bind="dep.time_str"></div>
-      <div class="line" data-bind="dep.line"></div>
-    </li>
-  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Destination</th>
+        <th>Line</th>
+      </tr>
+    </thead>
+    <tr data-foreach-dep="departures">
+      <td class="time" data-bind="dep.time_str"></td>
+      <td class="destination" data-bind="dep.destination"></td>
+      <td class="line" data-bind="dep.line"></td>
+    </tr>
+  </table>
 </div>

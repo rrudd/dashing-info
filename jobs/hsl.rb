@@ -13,6 +13,16 @@ def line_from_code(code)
   return line
 end
 
+def time_string_from_int(time_int)
+  time_str = time_int.to_s.rjust(4, '0').insert(2, ":")
+  return time_str
+end
+
+def destination_from_code(code, destinations)
+  destination = destinations[destinations.index{|s| s.include?(code)}][8..-1]
+  return destinations
+end
+
 SCHEDULER.every '1m', :first_in => 0 do |job|
   all_departures = []
   time_limit = Time.now + 2*60
@@ -20,10 +30,12 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   stops.each do |stop|
     response = Net::HTTP.get_response(host,"/hsl/prod/?request=stop&user=#{user}&pass=#{pass}&format=json&code=#{stop}")
     stop = JSON.parse(response.body)
-    stop_departures = stop[0]["departures"]
-    stop_departures.each do |departure|
+    destinations = stop[0]["lines"]
+    departures = stop[0]["departures"]
+    departures.each do |departure|
       departure["line"] = line_from_code(departure["code"])
-      departure["time_str"] = departure["time"].to_s.insert(2, ":")
+      departure["time_str"] = time_string_from_int(departure["time"])
+      departure["destination"] = destination_from_code(departure["code"], destinations)
       if departure["time_str"] > time_limit_str
         all_departures << departure
       end

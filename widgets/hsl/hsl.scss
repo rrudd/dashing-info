@@ -2,38 +2,39 @@
 
 .widget-hsl {
   background-color: $orange;
+  padding-bottom: 0 !important;
 
-  .updated-at {
-    color: rgba(255, 255, 255, 0.2);
-    top: 12px;
-    right: 10px;
-    left: auto;
+  table {
+    margin-top: 30px;
   }
 
-  ul {
-    margin-top: 40px;
-  }
-  li {
+  td {
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 100%;
-    overflow: auto;
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
   .time {
     padding-left: 20px;
-    display: inline-block;
     float:left;
   }
 
   .line {
-    font-weight: bold;
-    display: inline-block;
-    padding-right: 30px;
+    padding-right: 20px;
     float:right;
   }
 
-  li:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.3);
+  .destination {
+    font-size: small;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.3);
+    top: 12px;
+    right: 10px;
+    left: auto;
   }
 }
