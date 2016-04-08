@@ -20,7 +20,7 @@ end
 
 def destination_from_code(code, destinations)
   destination = destinations[destinations.index{|s| s.include?(code)}][8..-1]
-  return destinations
+  return destination
 end
 
 SCHEDULER.every '1m', :first_in => 0 do |job|
