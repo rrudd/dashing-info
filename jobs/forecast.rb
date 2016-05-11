@@ -4,6 +4,9 @@ require 'json'
 # Forecast API Key from https://developer.forecast.io
 forecast_api_key = ENV['FORECAST_KEY'] || ""
 
+puts("FORECAST API KEY")
+puts(forecast_api_key)
+
 # Latitude, Longitude for location
 forecast_location_lat = "60.171532"
 forecast_location_long = "24.92421"
