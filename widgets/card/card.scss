@@ -1,0 +1,34 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+@import '../../assets/stylesheets/colors';
+
+$background-color:  $deep-purple;
+$text-color: #fff;
+
+// ----------------------------------------------------------------------------
+// Widget-clock styles
+// ----------------------------------------------------------------------------
+.widget-card {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: $text-color;
+  background-color: $background-color;
+
+  iframe {
+    margin-top: 46px !important;
+    border: 0;
+    width: 100%;
+    height: 315px;
+  }
+
+  h2 {
+    color: $text-color;
+  }
+
+  .widget-container {
+    position: relative;
+  }
+
+}
