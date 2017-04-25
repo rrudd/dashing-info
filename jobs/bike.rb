@@ -15,8 +15,13 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   response = http.request(request)
 
   json_content = JSON.parse(response.body)
-  bikes_available = json_content["data"]["bikeRentalStation"]["bikesAvailable"]
-  spaces_available = json_content["data"]["bikeRentalStation"]["spacesAvailable"]
+  if json_content["data"]["bikeRentalStation"].nil?
+    bikes_available = 0
+    spaces_available = 0
+  else
+    bikes_available = json_content["data"]["bikeRentalStation"]["bikesAvailable"]
+    spaces_available = json_content["data"]["bikeRentalStation"]["spacesAvailable"]
+  end
   total_spaces = bikes_available + spaces_available
 
   send_event('bike', { bikes: bikes_available, spaces: total_spaces })
