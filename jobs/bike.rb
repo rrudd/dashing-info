@@ -8,7 +8,7 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   http = Net::HTTP.new(uri.host, uri.port)
   http.use_ssl = true
   # http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-  body = '{ bikeRentalStation(id: "A38") {bikesAvailable spacesAvailable } }'
+  body = '{ bikeRentalStation(id: "033") {bikesAvailable spacesAvailable } }'
   request = Net::HTTP::Post.new(uri.request_uri, initheader = {'Content-Type' =>'application/graphql'})
   request.body = body
 
