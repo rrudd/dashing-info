@@ -1,0 +1,45 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+@import '../../assets/stylesheets/colors';
+
+$background-color:  $deep-purple;
+$text-color: #fff;
+
+// ----------------------------------------------------------------------------
+// Widget-clock styles
+// ----------------------------------------------------------------------------
+
+.widget-vote {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+  box-shadow: none !important;
+
+  color: $text-color;
+  background: none transparent;
+
+  div#vote-wrap { width: 610px; height: 340px; padding: 0; overflow: hidden; }
+  iframe#frame { width: 610px; height: 340px; border: 0px solid black; overflow: hidden; }
+
+  iframe {
+    background: none transparent;
+    margin: 0px !important;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+  }
+
+
+  h2 {
+    color: $text-color;
+  }
+
+  .widget-container {
+    position: relative;
+    height: 100%;
+  }
+
+}
